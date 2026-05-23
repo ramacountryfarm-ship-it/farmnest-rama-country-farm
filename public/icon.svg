@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#204d3a"/>
+  <!-- Egg -->
+  <ellipse cx="256" cy="290" rx="115" ry="140" fill="#f0b322"/>
+  <ellipse cx="256" cy="168" rx="77" ry="90" fill="#f0b322"/>
+  <!-- Leaf -->
+  <path d="M345 145 C385 90, 445 100, 425 155 C405 205, 345 195, 345 145Z" fill="#25d366" opacity="0.9"/>
+  <!-- Shine -->
+  <ellipse cx="218" cy="208" rx="26" ry="38" fill="white" opacity="0.14" transform="rotate(-15 218 208)"/>
+</svg>

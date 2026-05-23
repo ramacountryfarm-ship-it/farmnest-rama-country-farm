@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/* ── Custom CSS variables ── */
+:root {
+  --green-deep: #204d3a;
+  --green-mid: #2a6049;
+  --gold: #f0b322;
+  --gold-light: #f5c94e;
+}
+
+/* ── Base resets ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #112419;
+  color: #fff;
+  font-family: var(--font-poppins), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Page fade-in ── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50%       { opacity: 0.6;  transform: scale(1.08); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.7s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.55s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* ── Staggered card delays ── */
+.card-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.card-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.card-delay-3 { animation-delay: 0.3s; opacity: 0; }
+
+/* ── Active tap effect on mobile ── */
+.social-card:active {
+  transform: scale(0.97);
+  transition: transform 0.1s ease-out;
+}
+
+/* ── Smooth transition on all interactive elements ── */
+.social-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
+}
+
+.social-card:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+
+/* ── Gold shimmer on logo ── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.text-gold-shimmer {
+  background: linear-gradient(90deg, #f0b322 30%, #fde68a 50%, #f0b322 70%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
