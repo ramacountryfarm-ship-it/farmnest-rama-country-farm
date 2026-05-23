@@ -8,7 +8,7 @@ export const SOCIAL_LINKS = {
   youtube: "https://www.youtube.com/@middethotalopalleruchulu",
   // WhatsApp: replace 91XXXXXXXXXX with your country code + phone number
   whatsapp:
-    "https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20order%20country%20eggs.",
+    "https://wa.me/917569322984?text=Hi%2C%20I%20want%20to%20order%20country%20eggs.",
 } as const;
 
 // ─────────────────────────────────────────────
